@@ -15,9 +15,9 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import About from './About';
-import Home from './Home';
-import Project from './Project';
+import About from "./About";
+import Home from "./Home";
+import Project from "./Project";
 
 const drawerWidth = 240;
 const navItems = ["Home", "About", "Project"];
@@ -28,6 +28,11 @@ function DrawerAppBar(props) {
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
+  };
+
+  const routingHandler = (event) => {
+    console.log(event.target.value)
+    console.log('click')
   };
 
   const drawer = (
@@ -74,7 +79,7 @@ function DrawerAppBar(props) {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
+              <Button key={item} sx={{ color: "#fff" }} onClick={routingHandler}>
                 {item}
               </Button>
             ))}
