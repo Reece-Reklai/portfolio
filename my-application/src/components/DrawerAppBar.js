@@ -13,7 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import github from '../img/favicon.ico'
+import github from '../img/github.ico'
 import linkedin from '../img/linkedin.ico'
 import './DrawerAppBar.css'
 
