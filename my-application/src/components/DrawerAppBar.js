@@ -13,12 +13,36 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import Stack from '@mui/material/Stack';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 import github from '../img/github.ico'
 import linkedin from '../img/linkedin.ico'
 import './DrawerAppBar.css'
 
 const drawerWidth = 200;
 const navItems = ["Home", "About", "Project"];
+
+function appBarLabel(label) {
+  return (
+    <Toolbar>
+      <IconButton edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+        <MenuIcon />
+      </IconButton>
+      <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
+        {label}
+      </Typography>
+    </Toolbar>
+  );
+}
+
+const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    primary: {
+      main: '#1976d2',
+    },
+  },
+});
 
 function DrawerAppBar(props) {
   const { window } = props;
@@ -53,7 +77,8 @@ function DrawerAppBar(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav" color='transparent'>
+      <ThemeProvider theme={darkTheme}>
+      <AppBar component="nav" color='primary'>
         <Toolbar>
           <IconButton
             color="inherit"
@@ -69,18 +94,19 @@ function DrawerAppBar(props) {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-          <img src={github} alt="github"></img>
-          <img src={linkedin} alt="linkdin" className="spacing"></img>
+          <a href="https://www.linkedin.com/in/reece-reklai-a546b4222/"><img src={github} alt="github"></img></a>
+          <a href="https://github.com/Reece-Reklai"><img src={linkedin} alt="linkdin" className="spacing"></img></a>
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#000" }} onClick={routingHandler}>
+              <Button key={item} sx={{ color: "#FFF" }} onClick={routingHandler}>
                 {item}
               </Button>
             ))}
           </Box>
         </Toolbar>
       </AppBar>
+      </ThemeProvider>
       <Box component="nav">
         <Drawer
           container={container}
