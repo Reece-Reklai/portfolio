@@ -28,8 +28,8 @@ const Item = styled(Paper)(({ theme }) => ({
 const Project = () => {
   return (
     <div>
-          <Grid spacing={2}>
-            <Grid xs={8} md={6} lg={4}>
+          <Grid>
+            <Grid xs={8} md={6} >
               <Item>
                 {" "}
                 <Card sx={{ width: 1, height: 1 }}>
@@ -54,7 +54,7 @@ const Project = () => {
                       ReactJS to build the front-end with the use of
                       React-MaterialUI as the design. I deploy/hosted this
                       website through netlify. It takes advantage of React
-                      functions, React-Routing, and more!
+                      functions, React props and events, React-Routing, and more!
                     </Typography>
                   </CardContent>
                   <CardActions>
@@ -70,7 +70,7 @@ const Project = () => {
                 </Card>
               </Item>
             </Grid>
-            <Grid item xs={8} md={6} lg={4}>
+            <Grid item xs={8} md={6} >
               <Item>
                 {" "}
                 <Card sx={{ width: 1, height: 1 }}>
@@ -112,7 +112,7 @@ const Project = () => {
                 </Card>
               </Item>
             </Grid>
-            <Grid xs={8} md={6} lg={4}>
+            <Grid xs={8} md={6} >
               <Item>
                 {" "}
                 <Card sx={{ width: 1, height: 1 }}>
@@ -152,7 +152,7 @@ const Project = () => {
                 </Card>
               </Item>
             </Grid>
-            <Grid item xs={8} md={6} lg={4}>
+            <Grid item xs={8} md={6} >
               <Item>
                 {" "}
                 <Card sx={{ width: 1, height: 1 }}>
@@ -190,7 +190,7 @@ const Project = () => {
                 </Card>
               </Item>
             </Grid>
-            <Grid item xs={8} md={6} lg={4}>
+            <Grid item xs={8} md={6} >
               <Item>
                 {" "}
                 <Card sx={{ width: 1, height: 1 }}>
@@ -230,7 +230,7 @@ const Project = () => {
                 </Card>
               </Item>
             </Grid>
-            <Grid item xs={8} md={6} lg={4}>
+            <Grid item xs={8} md={6} >
               <Item>
                 {" "}
                 <Card sx={{ width: 1, height: 1 }}>

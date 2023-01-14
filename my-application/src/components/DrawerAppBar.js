@@ -13,19 +13,30 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import github from '../img/github.ico'
-import linkedin from '../img/linkedin.ico'
-import './DrawerAppBar.css'
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import github from "../img/github.ico";
+import linkedin from "../img/linkedin.ico";
+import "./DrawerAppBar.css";
 
 const drawerWidth = 200;
 const navItems = ["Home", "About", "Project"];
+const drawItems = [
+  <a href="https://www.linkedin.com/in/reece-reklai-a546b4222/">
+    <img src={linkedin} alt="github"></img>
+  </a>,
+  <a href="https://github.com/Reece-Reklai">
+    <img src={github} alt="linkedin"></img>
+  </a>,
+  "Home",
+  "About",
+  "Project",
+];
 
 const darkTheme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: "dark",
     primary: {
-      main: '#1976d2',
+      main: "#1976d2",
     },
   },
 });
@@ -33,20 +44,20 @@ const darkTheme = createTheme({
 function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  
+
   const handleDrawerToggle = (event) => {
     setMobileOpen((prevState) => !prevState);
-    props.nav(event.target.innerText)
+    props.nav(event.target.innerText);
   };
 
   const routingHandler = (event) => {
-    props.nav(event.target.innerText)
+    props.nav(event.target.innerText);
   };
 
   const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center"}}>
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <List>
-        {navItems.map((item) => (
+        {drawItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
               <ListItemText primary={item} />
@@ -64,34 +75,42 @@ function DrawerAppBar(props) {
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <ThemeProvider theme={darkTheme}>
-      <AppBar component="nav" color='primary'>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" } }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-          >
-          <a href="https://www.linkedin.com/in/reece-reklai-a546b4222/"><img src={linkedin} alt="github"></img></a>
-          <a href="https://github.com/Reece-Reklai"><img src={github} alt="linkdin" className="spacing"></img></a>
-          </Typography>
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#FFF" }} onClick={routingHandler}>
-                {item}
-              </Button>
-            ))}
-          </Box>
-        </Toolbar>
-      </AppBar>
+        <AppBar component="nav" color="primary">
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{ mr: 2, display: { sm: "none" } }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            >
+              <a href="https://www.linkedin.com/in/reece-reklai-a546b4222/">
+                <img src={linkedin} alt="github"></img>
+              </a>
+              <a href="https://github.com/Reece-Reklai">
+                <img src={github} alt="linkdin" className="spacing"></img>
+              </a>
+            </Typography>
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              {navItems.map((item) => (
+                <Button
+                  key={item}
+                  sx={{ color: "#FFF" }}
+                  onClick={routingHandler}
+                >
+                  {item}
+                </Button>
+              ))}
+            </Box>
+          </Toolbar>
+        </AppBar>
       </ThemeProvider>
       <Box component="nav">
         <Drawer
