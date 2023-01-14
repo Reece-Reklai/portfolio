@@ -1,8 +1,5 @@
 import * as React from "react";
-import CssBaseline from "@mui/material/CssBaseline";
-import Container from "@mui/material/Container";
 import { experimentalStyled as styled } from "@mui/material/styles";
-import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
@@ -31,11 +28,8 @@ const Item = styled(Paper)(({ theme }) => ({
 const Project = () => {
   return (
     <div>
-      <CssBaseline />
-      <Container maxWidth="xl" className="container">
-        <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={2}>
-            <Grid item xs={4}>
+          <Grid spacing={2}>
+            <Grid xs={8} md={6} lg={4}>
               <Item>
                 {" "}
                 <Card sx={{ width: 1, height: 1 }}>
@@ -68,10 +62,7 @@ const Project = () => {
                       href="https://github.com/Reece-Reklai/portfolio"
                       className="button-hyperlink"
                     >
-                      <Button
-                        size="medium"
-                        color="primary"
-                      >
+                      <Button size="medium" color="primary">
                         Project
                       </Button>
                     </a>
@@ -79,7 +70,7 @@ const Project = () => {
                 </Card>
               </Item>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={8} md={6} lg={4}>
               <Item>
                 {" "}
                 <Card sx={{ width: 1, height: 1 }}>
@@ -113,10 +104,7 @@ const Project = () => {
                       href="https://github.com/Reece-Reklai/palau_real_estate"
                       className="button-hyperlink"
                     >
-                      <Button
-                        size="medium"
-                        color="primary"
-                      >
+                      <Button size="medium" color="primary">
                         Project
                       </Button>
                     </a>
@@ -124,7 +112,7 @@ const Project = () => {
                 </Card>
               </Item>
             </Grid>
-            <Grid item xs={4}>
+            <Grid xs={8} md={6} lg={4}>
               <Item>
                 {" "}
                 <Card sx={{ width: 1, height: 1 }}>
@@ -156,10 +144,7 @@ const Project = () => {
                       href="https://github.com/Reece-Reklai/language_interpreter"
                       className="button-hyperlink"
                     >
-                      <Button
-                        size="medium"
-                        color="primary"
-                      >
+                      <Button size="medium" color="primary">
                         Project
                       </Button>
                     </a>
@@ -167,7 +152,7 @@ const Project = () => {
                 </Card>
               </Item>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={8} md={6} lg={4}>
               <Item>
                 {" "}
                 <Card sx={{ width: 1, height: 1 }}>
@@ -197,10 +182,7 @@ const Project = () => {
                       href="https://github.com/Reece-Reklai/bacon_number"
                       className="button-hyperlink"
                     >
-                      <Button
-                        size="medium"
-                        color="primary"
-                      >
+                      <Button size="medium" color="primary">
                         Project
                       </Button>
                     </a>
@@ -208,7 +190,7 @@ const Project = () => {
                 </Card>
               </Item>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={8} md={6} lg={4}>
               <Item>
                 {" "}
                 <Card sx={{ width: 1, height: 1 }}>
@@ -240,10 +222,7 @@ const Project = () => {
                       href="https://github.com/Reece-Reklai/burning_house"
                       className="button-hyperlink"
                     >
-                      <Button
-                        size="medium"
-                        color="primary"
-                      >
+                      <Button size="medium" color="primary">
                         Project
                       </Button>
                     </a>
@@ -251,7 +230,7 @@ const Project = () => {
                 </Card>
               </Item>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={8} md={6} lg={4}>
               <Item>
                 {" "}
                 <Card sx={{ width: 1, height: 1 }}>
@@ -281,10 +260,7 @@ const Project = () => {
                       href="https://github.com/Reece-Reklai/fountain_yelp_program"
                       className="button-hyperlink"
                     >
-                      <Button
-                        size="medium"
-                        color="primary"
-                      >
+                      <Button size="medium" color="primary">
                         Project
                       </Button>
                     </a>
@@ -293,8 +269,6 @@ const Project = () => {
               </Item>
             </Grid>
           </Grid>
-        </Box>
-      </Container>
     </div>
   );
 };
