@@ -15,15 +15,17 @@ import Divider from "@mui/material/Divider";
 import "./Project.css";
 import house from "../img/house.jpg";
 import book from "../img/book.jpg";
-import code from '../img/code.jpg'
-import graph from '../img/graph.jpg'
+import code from "../img/code.jpg";
+import graph from "../img/graph.jpg";
+import burn from "../img/burn.jpg";
+import fountain from "../img/fountain.jpg";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
   padding: theme.spacing(2),
   textAlign: "center",
-  color: theme.palette.text.secondary,
+  color: theme.palette.text.primary,
 }));
 
 const Project = () => {
@@ -36,7 +38,7 @@ const Project = () => {
             <Grid item xs={4}>
               <Item>
                 {" "}
-                <Card sx={{ maxWidth: 500, height: 500 }}>
+                <Card sx={{ width: 1, height: 1 }}>
                   <CardMedia
                     component="img"
                     height="250"
@@ -48,21 +50,31 @@ const Project = () => {
                       My Portfolio
                     </Typography>
                     <Divider />
-                    <Typography variant="body1" color="text.secondary">
+                    <Typography variant="body1" color="text.primary">
                       Technologies: HTML | CSS | Javascript | REACTjs |
                       React-MaterialUI | Netlify
                     </Typography>
                     <Divider />
-                    <Typography variant="body2" color="text.secondary">
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                    <Typography variant="body1" color="text.primary">
+                      This is my website that I built from scratch. I used
+                      ReactJS to build the front-end with the use of
+                      React-MaterialUI as the design. I deploy/hosted this
+                      website through netlify. It takes advantage of React
+                      functions, React-Routing, and more!
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      Project
-                    </Button>
+                    <a
+                      href="https://github.com/Reece-Reklai/portfolio"
+                      className="button-hyperlink"
+                    >
+                      <Button
+                        size="medium"
+                        color="primary"
+                      >
+                        Project
+                      </Button>
+                    </a>
                   </CardActions>
                 </Card>
               </Item>
@@ -70,7 +82,7 @@ const Project = () => {
             <Grid item xs={4}>
               <Item>
                 {" "}
-                <Card sx={{ maxWidth: 500, height: 500 }}>
+                <Card sx={{ width: 1, height: 1 }}>
                   <CardMedia
                     component="img"
                     height="250"
@@ -82,21 +94,32 @@ const Project = () => {
                       Palau Real Estate
                     </Typography>
                     <Divider />
-                    <Typography variant="body1" color="text.secondary">
+                    <Typography variant="body1" color="text.primary">
                       Technologies: HTML | CSS | Javascript | REACTjs |
                       React-BootStrap | Google Firebase | EMAILjs
                     </Typography>
                     <Divider />
-                    <Typography variant="body2" color="text.secondary">
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                    <Typography variant="body1" color="text.primary">
+                      Developed as a group project with three people. Users can
+                      view the current weather status in the country of Palau
+                      and view house/land listings for sale. Users can create an
+                      account and login to create their own listing sale. Users
+                      can contact us through an email service set up within the
+                      website.
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      Project
-                    </Button>
+                    <a
+                      href="https://github.com/Reece-Reklai/palau_real_estate"
+                      className="button-hyperlink"
+                    >
+                      <Button
+                        size="medium"
+                        color="primary"
+                      >
+                        Project
+                      </Button>
+                    </a>
                   </CardActions>
                 </Card>
               </Item>
@@ -104,7 +127,7 @@ const Project = () => {
             <Grid item xs={4}>
               <Item>
                 {" "}
-                <Card sx={{ maxWidth: 500, height: 500 }}>
+                <Card sx={{ width: 1, height: 1 }}>
                   <CardMedia
                     component="img"
                     height="250"
@@ -116,20 +139,30 @@ const Project = () => {
                       Language Interpreter
                     </Typography>
                     <Divider />
-                    <Typography variant="body1" color="text.secondary">
+                    <Typography variant="body1" color="text.primary">
                       Technologies: Java | Ada Programming Language
                     </Typography>
                     <Divider />
-                    <Typography variant="body2" color="text.secondary">
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                    <Typography variant="body1" color="text.primary">
+                      Developed with a partner. This language interpreter is a
+                      parser for the Ada Programming Language developed within
+                      Java. It can perform perform quadratic operations, if-else
+                      statements, print, comments, and quick-sort algorithmn in
+                      Ada syntax.
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      Project
-                    </Button>
+                    <a
+                      href="https://github.com/Reece-Reklai/language_interpreter"
+                      className="button-hyperlink"
+                    >
+                      <Button
+                        size="medium"
+                        color="primary"
+                      >
+                        Project
+                      </Button>
+                    </a>
                   </CardActions>
                 </Card>
               </Item>
@@ -137,7 +170,7 @@ const Project = () => {
             <Grid item xs={4}>
               <Item>
                 {" "}
-                <Card sx={{ maxWidth: 500, height: 500 }}>
+                <Card sx={{ width: 1, height: 1 }}>
                   <CardMedia
                     component="img"
                     height="250"
@@ -149,20 +182,28 @@ const Project = () => {
                       Bacon Number
                     </Typography>
                     <Divider />
-                    <Typography variant="body1" color="text.secondary">
-                      Technologies: REACTjs | React-MaterialUI | Netlify
+                    <Typography variant="body1" color="text.primary">
+                      Technologies: C++
                     </Typography>
                     <Divider />
-                    <Typography variant="body2" color="text.secondary">
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                    <Typography variant="body1" color="text.primary">
+                      School project that uses breadth-first serach to locate
+                      the shortest path between two points. It uses
+                      bridges.cs.herokuapp.com to visualize the path.
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      Project
-                    </Button>
+                    <a
+                      href="https://github.com/Reece-Reklai/bacon_number"
+                      className="button-hyperlink"
+                    >
+                      <Button
+                        size="medium"
+                        color="primary"
+                      >
+                        Project
+                      </Button>
+                    </a>
                   </CardActions>
                 </Card>
               </Item>
@@ -170,32 +211,42 @@ const Project = () => {
             <Grid item xs={4}>
               <Item>
                 {" "}
-                <Card sx={{ maxWidth: 500, height: 500 }}>
+                <Card sx={{ width: 1, height: 1 }}>
                   <CardMedia
                     component="img"
-                    height="140"
-                    image="/static/images/cards/contemplative-reptile.jpg"
-                    alt="green iguana"
+                    height="250"
+                    image={burn}
+                    alt="burning-house"
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
                       Burning House
                     </Typography>
                     <Divider />
-                    <Typography variant="body1" color="text.secondary">
-                      Technologies: REACTjs | React-MaterialUI | Netlify
+                    <Typography variant="body1" color="text.primary">
+                      Technologies: Prolog
                     </Typography>
                     <Divider />
-                    <Typography variant="body2" color="text.secondary">
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                    <Typography variant="body1" color="text.primary">
+                      It is a text-based escape game. Users can view their
+                      current health status, environment around them, and
+                      equipment. They can interact with objects around the house
+                      to either change locations or influence their character
+                      capabilities. Escape the burning house!
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      Project
-                    </Button>
+                    <a
+                      href="https://github.com/Reece-Reklai/burning_house"
+                      className="button-hyperlink"
+                    >
+                      <Button
+                        size="medium"
+                        color="primary"
+                      >
+                        Project
+                      </Button>
+                    </a>
                   </CardActions>
                 </Card>
               </Item>
@@ -203,32 +254,40 @@ const Project = () => {
             <Grid item xs={4}>
               <Item>
                 {" "}
-                <Card sx={{ maxWidth: 500, height: 500 }}>
+                <Card sx={{ width: 1, height: 1 }}>
                   <CardMedia
                     component="img"
                     height="250"
-                    image={code}
-                    alt="coding"
+                    image={fountain}
+                    alt="drinking-fountian"
                   />
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="div">
-                      Palau Real Estate
+                      Fountain Yelp Program
                     </Typography>
                     <Divider />
-                    <Typography variant="body1" color="text.secondary">
-                      Technologies: REACTjs | React-MaterialUI | Netlify
+                    <Typography variant="body1" color="text.primary">
+                      Technologies: C++
                     </Typography>
                     <Divider />
-                    <Typography variant="body2" color="text.secondary">
-                      Lizards are a widespread group of squamate reptiles, with
-                      over 6,000 species, ranging across all continents except
-                      Antarctica
+                    <Typography variant="body1" color="text.primary">
+                      This program allows users to create an account to add new
+                      fountain locations around University campus and
+                      create/view reviews associated with each fountains
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button size="small" color="primary">
-                      Project
-                    </Button>
+                    <a
+                      href="https://github.com/Reece-Reklai/fountain_yelp_program"
+                      className="button-hyperlink"
+                    >
+                      <Button
+                        size="medium"
+                        color="primary"
+                      >
+                        Project
+                      </Button>
+                    </a>
                   </CardActions>
                 </Card>
               </Item>

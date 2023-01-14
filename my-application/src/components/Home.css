@@ -21,7 +21,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -90%);
+  transform: translate(-50%, -85%);
+  font-size: 40px;
+  font-family: Arial, sans-serif
 }
 .centeredDescription {
   /* Center and scale the text nicely */
@@ -29,4 +31,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -35%);
+  font-size: 40px;
+  font-family: Arial, sans-serif
 }
