@@ -133,9 +133,9 @@ const Project = () => {
                     <Divider />
                     <Typography variant="body1" color="text.primary">
                       Developed with a partner. This language interpreter is a
-                      parser for the Ada Programming Language developed within
+                      parser for the Ada Programming Language developed in
                       Java. It can perform perform quadratic operations, if-else
-                      statements, print, comments, and quick-sort algorithmn in
+                      statements, print to terminal, comments, and quick-sort algorithmn in
                       Ada syntax.
                     </Typography>
                   </CardContent>
@@ -172,7 +172,7 @@ const Project = () => {
                     </Typography>
                     <Divider />
                     <Typography variant="body1" color="text.primary">
-                      School project that uses breadth-first serach to locate
+                      School project that uses breadth-first search to locate
                       the shortest path between two points. It uses
                       bridges.cs.herokuapp.com to visualize the path.
                     </Typography>
@@ -252,7 +252,7 @@ const Project = () => {
                     <Typography variant="body1" color="text.primary">
                       This program allows users to create an account to add new
                       fountain locations around University campus and
-                      create/view reviews associated with each fountains
+                      create and view reviews associated with each fountain.
                     </Typography>
                   </CardContent>
                   <CardActions>
