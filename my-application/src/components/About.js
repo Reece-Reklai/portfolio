@@ -1,4 +1,7 @@
-import * as React from "react";
+import { useState } from "react";
+import { send } from "emailjs-com";
+import CardActions from "@mui/material/CardActions";
+import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -12,6 +15,27 @@ import "./About.css";
 
 const About = () => {
   const darkTheme = createTheme({ palette: { mode: "dark" } });
+  const [toSend, setToSend] = useState({
+    from_name: "",
+    to_name: "",
+    message: "",
+    reply_to: "",
+  });
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    send("service_8trg9ht", "template_aiwvtw3", toSend, "aehVwpHdlcBlbJyaA")
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+      })
+      .catch((err) => {
+        console.log("FAILED...", err);
+      });
+  };
+
+  const handleChange = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  };
 
   return (
     <>
@@ -60,14 +84,46 @@ const About = () => {
                   a habit to read because learning from people's journey is a
                   testament that I find important for me to take myself to the
                   next level. In my spiritual path, I started to read the Bible
-                  and eventually, hoping to start attending church! Lastly, The process of
-                  learning is what would best describe my personality: I will
-                  spend many hours to learn new skills and get better at current
-                  ones, it is just fun!
+                  and eventually, hoping to start attending church! Lastly, The
+                  process of learning is what would best describe my
+                  personality: I will spend many hours to learn new skills and
+                  get better at current ones, it is just fun!
                 </Typography>
               </Box>
             </CardContent>
           </ThemeProvider>
+        </Card>
+        <Card maxWidth="xl" sx={{ mt: 5 }}>
+          <CardContent>
+            <form onSubmit={onSubmit}>
+              <input
+                type="text"
+                name="from_name"
+                placeholder="from name"
+                value={toSend.from_name}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="message"
+                placeholder="Message"
+                value={toSend.message}
+                onChange={handleChange}
+              />
+              <input
+                type="text"
+                name="reply_to"
+                placeholder="Email"
+                value={toSend.reply_to}
+                onChange={handleChange}
+              />
+              <CardActions>
+                <Button variant="contained" sx={{ ml: "33%" }} type="submit">
+                  Download Resume
+                </Button>
+              </CardActions>
+            </form>
+          </CardContent>
         </Card>
       </Container>
     </>
