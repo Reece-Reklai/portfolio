@@ -17,7 +17,6 @@ const About = () => {
   const darkTheme = createTheme({ palette: { mode: "dark" } });
   const [toSend, setToSend] = useState({
     from_name: "",
-    to_name: "",
     message: "",
     reply_to: "",
   });
@@ -99,7 +98,7 @@ const About = () => {
               <input
                 type="text"
                 name="from_name"
-                placeholder="from name"
+                placeholder="Name"
                 value={toSend.from_name}
                 onChange={handleChange}
               />
