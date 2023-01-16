@@ -53,8 +53,7 @@ const Project = () => {
                   This is my website that I built from scratch. I used ReactJS
                   to build the front-end with the use of React-MaterialUI as the
                   design. I deploy/hosted this website through netlify. It takes
-                  advantage of React functions, React props and events,
-                  React-Routing, and more!
+                  advantage of React-routing, react hooks, emailing service from Email/js, and more
                 </Typography>
               </CardContent>
               <CardActions sx={{ mr: 15 }}>
