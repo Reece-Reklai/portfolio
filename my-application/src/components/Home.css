@@ -19,7 +19,7 @@
 .centeredName {
   /* Center and scale the text nicely */
   position: absolute;
-  top: 49%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -85%);
   font-size: 40px;
