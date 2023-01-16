@@ -41,11 +41,11 @@ const About = () => {
     <>
       <CssBaseline />
       <Container maxWidth="xl" sx={{ mt: 5 }}>
-        <Card sx={{height:1, width:1}}>
+        <Card sx={{height:1, width:1}} id='about-card'>
           <Box sx={{ display: "flex", flexDirection: "column"}}></Box>
-          <CardMedia component="img" sx={{ width:'100%' }} image={Reece} id='reece-reklai' />
+          <CardMedia component="img" sx={{width:'100%' }} image={Reece} id='reece-reklai' />
           <ThemeProvider theme={darkTheme}>
-            <CardContent>
+            <CardContent sx={{mt:'3%'}}>
               <Box
                 sx={{
                   p: 2,
