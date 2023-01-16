@@ -41,9 +41,9 @@ const About = () => {
     <>
       <CssBaseline />
       <Container maxWidth="xl" sx={{ mt: 5 }}>
-        <Card sx={{ display: "flex"}}>
+        <Card sx={{ display: "flex", height:1, width:1}}>
           <Box sx={{ display: "flex", flexDirection: "column"}}></Box>
-          <CardMedia component="img" sx={{ width: 250 }} image={Reece} />
+          <CardMedia component="img" sx={{ width: 250 }} image={Reece} id='reece-reklai' />
           <ThemeProvider theme={darkTheme}>
             <CardContent>
               <Box
@@ -92,7 +92,7 @@ const About = () => {
                 <CardActions>
                   <Button
                     variant="contained"
-                    sx={{ ml: "33%", mt: "1%" }}
+                    sx={{ mt: "1%", height:1, width:1}}
                     href={Resume}
                     download='Reece Reklai Resume'
                   >
@@ -148,7 +148,7 @@ const About = () => {
                   <CardActions>
                     <Button
                       variant="contained"
-                      sx={{ ml: "-0.5%", mt: "0.5%" }}
+                      sx={{ ml: "-0.5%", mt: "0.5%", height:1, width:'0.707' }}
                       type="submit"
                     >
                       Submit

@@ -23,3 +23,10 @@ textarea {
 button {
   background-color: blue;
 }
+
+/* mobile devices */
+@media (max-width: 600px) {
+  #reece-reklai {
+    display: none;
+  }
+}
