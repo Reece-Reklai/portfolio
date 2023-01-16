@@ -11,6 +11,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Reece from "../img/Reece-Reklai.jpeg";
+import Resume from '../downloads/Resume.pdf'
 import "./About.css";
 
 const About = () => {
@@ -93,7 +94,7 @@ const About = () => {
                     variant="contained"
                     sx={{ ml: "33%", mt: "1%" }}
                     href={'#'}
-                    download="Reece Reklai Resume"
+                    download={Resume}
                   >
                     Download My Resume
                   </Button>
