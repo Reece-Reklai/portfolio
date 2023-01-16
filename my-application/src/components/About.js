@@ -11,7 +11,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Container from "@mui/material/Container";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Reece from "../img/Reece-Reklai.jpeg";
-import Resume from '../downloads/Resume.pdf'
+import Resume from "../downloads/Resume.pdf";
 import "./About.css";
 
 const About = () => {
@@ -41,11 +41,16 @@ const About = () => {
     <>
       <CssBaseline />
       <Container maxWidth="xl" sx={{ mt: 5 }}>
-        <Card sx={{height:1, width:1}} id='about-card'>
-          <Box sx={{ display: "flex", flexDirection: "column"}}></Box>
-          <CardMedia component="img" sx={{width:'100%' }} image={Reece} id='reece-reklai' />
+        <Card sx={{ height: 1, width: 1 }} id="about-card">
+          <Box sx={{ display: "flex", flexDirection: "column" }}></Box>
+          <CardMedia
+            component="img"
+            sx={{ width: "100%" }}
+            image={Reece}
+            id="reece-reklai"
+          />
           <ThemeProvider theme={darkTheme}>
-            <CardContent sx={{mt:'3%'}}>
+            <CardContent sx={{ mt: "3%" }}>
               <Box
                 sx={{
                   p: 2,
@@ -80,11 +85,11 @@ const About = () => {
                   My passions and hobbies are centered around self improvement
                   in all aspects of my life. For my fitness journey, I track my
                   macros and lift weights. As for coding, I started looking into
-                  two technologies: nodeJS and Kotlin. Lastly, I started to develop
-                  a habit to read because learning from people's journey is a
-                  testament that I find important for me to take myself to the
-                  next level. In my spiritual path, I started to read the Bible
-                  and eventually, hoping to start attending church! The
+                  two technologies: nodeJS and Kotlin. Lastly, I started to
+                  develop a habit to read because learning from people's journey
+                  is a testament that I find important for me to take myself to
+                  the next level. In my spiritual path, I started to read the
+                  Bible and eventually, hoping to start attending church! The
                   process of learning is what would best describe my
                   personality: I will spend many hours to learn new skills and
                   get better at current ones, it is just fun!
@@ -92,9 +97,9 @@ const About = () => {
                 <CardActions>
                   <Button
                     variant="contained"
-                    sx={{ mt: "1%", height:1, width:1}}
+                    sx={{ mt: "1%", height: 1, width: 1 }}
                     href={Resume}
-                    download='Reece Reklai Resume'
+                    download="Reece Reklai Resume"
                   >
                     Download My Resume
                   </Button>
@@ -114,10 +119,10 @@ const About = () => {
                   gap: 2,
                 }}
               >
-                <Typography variant="h3" gutterBottom className="font-color">
-                  Contact Me
-                </Typography>
-                <form onSubmit={onSubmit}>
+                <form onSubmit={onSubmit} className="form">
+                  <Typography variant="h3" gutterBottom className="font-color">
+                    Contact Me
+                  </Typography>
                   <input
                     type="text"
                     name="from_name"
@@ -148,7 +153,7 @@ const About = () => {
                   <CardActions>
                     <Button
                       variant="contained"
-                      sx={{ ml: "-2%", mt: "2%", height:1, width:'0.73' }}
+                      sx={{ mt: "2%", height: 1, width: "100%" }}
                       type="submit"
                     >
                       Submit

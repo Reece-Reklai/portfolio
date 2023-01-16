@@ -23,6 +23,9 @@ textarea {
 button {
   background-color: blue;
 }
+form {
+  text-align: left;
+}
 @media (min-width: 750px) {
   #about-card {
     display: flex;
