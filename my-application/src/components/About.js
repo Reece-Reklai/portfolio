@@ -88,41 +88,75 @@ const About = () => {
                   personality: I will spend many hours to learn new skills and
                   get better at current ones, it is just fun!
                 </Typography>
+                <CardActions>
+                  <Button
+                    variant="contained"
+                    sx={{ ml: "33%", mt: "1%" }}
+                    href={'#'}
+                    download="Reece Reklai Resume"
+                  >
+                    Download My Resume
+                  </Button>
+                </CardActions>
               </Box>
             </CardContent>
           </ThemeProvider>
         </Card>
         <Card maxWidth="xl" sx={{ mt: 5 }}>
-          <CardContent>
-            <form onSubmit={onSubmit}>
-              <input
-                type="text"
-                name="from_name"
-                placeholder="Name"
-                value={toSend.from_name}
-                onChange={handleChange}
-              />
-              <input
-                type="text"
-                name="message"
-                placeholder="Message"
-                value={toSend.message}
-                onChange={handleChange}
-              />
-              <input
-                type="text"
-                name="reply_to"
-                placeholder="Email"
-                value={toSend.reply_to}
-                onChange={handleChange}
-              />
-              <CardActions>
-                <Button variant="contained" sx={{ ml: "33%" }} type="submit">
-                  Download Resume
-                </Button>
-              </CardActions>
-            </form>
-          </CardContent>
+          <Box sx={{ display: "flex", flexDirection: "column" }}></Box>
+          <ThemeProvider theme={darkTheme}>
+            <CardContent>
+              <Box
+                sx={{
+                  p: 2,
+                  bgcolor: "background.default",
+                  gap: 2,
+                }}
+              >
+                <Typography variant="h3" gutterBottom className="font-color">
+                  Contact Me
+                </Typography>
+                <form onSubmit={onSubmit}>
+                  <input
+                    type="text"
+                    name="from_name"
+                    placeholder="Name"
+                    value={toSend.from_name}
+                    onChange={handleChange}
+                  />
+                  <br></br>
+                  <br></br>
+                  <input
+                    type="text"
+                    name="reply_to"
+                    placeholder="Email"
+                    value={toSend.reply_to}
+                    onChange={handleChange}
+                  />
+                  <br></br>
+                  <br></br>
+                  <textarea
+                    type="text"
+                    name="message"
+                    placeholder="Message"
+                    value={toSend.message}
+                    onChange={handleChange}
+                    row="13"
+                    cols="132"
+                  />
+                  <CardActions>
+                    <Button
+                      variant="contained"
+                      sx={{ ml: "-0.5%", mt: "0.5%" }}
+                      type="submit"
+                    >
+                      Submit
+                    </Button>
+                  </CardActions>
+                </form>
+              </Box>
+            </CardContent>
+          </ThemeProvider>
         </Card>
       </Container>
     </>
