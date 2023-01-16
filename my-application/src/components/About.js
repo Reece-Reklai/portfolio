@@ -120,7 +120,7 @@ const About = () => {
                   <input
                     type="text"
                     name="from_name"
-                    placeholder="Name"
+                    placeholder="Enter Name"
                     value={toSend.from_name}
                     onChange={handleChange}
                   />
@@ -129,7 +129,7 @@ const About = () => {
                   <input
                     type="text"
                     name="reply_to"
-                    placeholder="Email"
+                    placeholder="Enter Email Address"
                     value={toSend.reply_to}
                     onChange={handleChange}
                   />
@@ -138,7 +138,7 @@ const About = () => {
                   <textarea
                     type="text"
                     name="message"
-                    placeholder="Message"
+                    placeholder="Enter message"
                     value={toSend.message}
                     onChange={handleChange}
                     row="13"
