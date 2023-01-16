@@ -63,7 +63,7 @@ const About = () => {
                   I am attending Walla Walla University, my expected graduation
                   is June 2023. In my time attending Walla Walla University, I
                   have explored many avenues within the world of coding.
-                  Recently, I have found an interested in the following: web
+                  Recently, I have found an interest in the following: web
                   development and mobile app development.
                   <br></br>
                   <br></br>
@@ -80,11 +80,11 @@ const About = () => {
                   My passions and hobbies are centered around self improvement
                   in all aspects of my life. For my fitness journey, I track my
                   macros and lift weights. As for coding, I started looking into
-                  two technologies: nodeJS and Kotlin. Lastly, I started develop
+                  two technologies: nodeJS and Kotlin. Lastly, I started to develop
                   a habit to read because learning from people's journey is a
                   testament that I find important for me to take myself to the
                   next level. In my spiritual path, I started to read the Bible
-                  and eventually, hoping to start attending church! Lastly, The
+                  and eventually, hoping to start attending church! The
                   process of learning is what would best describe my
                   personality: I will spend many hours to learn new skills and
                   get better at current ones, it is just fun!
@@ -93,8 +93,8 @@ const About = () => {
                   <Button
                     variant="contained"
                     sx={{ ml: "33%", mt: "1%" }}
-                    href={'#'}
-                    download={Resume}
+                    href={Resume}
+                    download='Reece Reklai Resume'
                   >
                     Download My Resume
                   </Button>
