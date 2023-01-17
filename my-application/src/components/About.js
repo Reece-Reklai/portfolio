@@ -27,6 +27,9 @@ const About = () => {
     send("service_8trg9ht", "template_aiwvtw3", toSend, "aehVwpHdlcBlbJyaA")
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
+        document.querySelector('#name').value = ''
+        document.querySelector('#email').value = ''
+        document.querySelector('#message').value = ''
       })
       .catch((err) => {
         console.log("FAILED...", err);
@@ -129,6 +132,7 @@ const About = () => {
                     placeholder="Enter Name"
                     value={toSend.from_name}
                     onChange={handleChange}
+                    id='name'
                   />
                   <br></br>
                   <br></br>
@@ -138,6 +142,7 @@ const About = () => {
                     placeholder="Enter Email Address"
                     value={toSend.reply_to}
                     onChange={handleChange}
+                    id='email'
                   />
                   <br></br>
                   <br></br>
@@ -149,6 +154,7 @@ const About = () => {
                     onChange={handleChange}
                     row="13"
                     cols="132"
+                    id="message"
                   />
                   <CardActions>
                     <Button
